@@ -101,7 +101,7 @@ ind = 0
 def mensaje(n_clicks,value1,value2,value3,value4):
     global ind
     if n_clicks > ind:   
-        url = "http://172.30.2.11:90/rec-disp/"
+        url = "http://3.137.205.27:5000//rec-disp/"
         parametros = {'actividad':value1, 'entidad_fin':value2, 'zona_com':value3, 'zona_tec':value4}
         req = requests.get(url = url, params = parametros)
         data = req.json()
