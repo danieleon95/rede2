@@ -6,7 +6,7 @@ import dash_html_components as html
 import requests
 
 ## cargue de estilos y bootstrap
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js']
+external_stylesheets = ['https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
@@ -94,13 +94,19 @@ app.layout = html.Div([html.Div([], className='col-md-1'),
     html.Br(),
     html.Div([dcc.Input(placeholder='Ingrese la información correspondiente',id='opcion9',type="number",style={'font-size': '15px'}, className='col-md-4 text-center')]),
     html.Br(),
+    html.Br(),
     html.Div([html.Button('Limpiar Campos',id='boton2', n_clicks=0, style={'font-size': '13px'}, className='col-md-2 btn btn-info')], className='row align-items-center justify-content-center'),
     html.Br(),
     html.Div([html.Button('Enviar información',id='boton', n_clicks=0, disabled=True, style={'font-size': '13px'}, className='col-md-2 btn btn-info')], className='row align-items-center justify-content-center'),
     html.Br(),
-    html.B(html.Div('Tecnologías recomendadas para el comercio', id='respuesta', style={'textAlign': 'center'})),
+    html.Br(),
+    html.B(html.Div(html.H5('Tecnologías recomendadas para el comercio', id='respuesta', style={'textAlign': 'center'}))),
+    html.Br(),    
     html.Div(id='mensaje', style={'textAlign': 'center'}),
-    html.Br()
+    html.Br(),
+    html.Br(),
+    html.Br(),
+    html.B(html.Div('Redeban Multicolor - Proyecto Trabajo de Grado - Universidad de los Andes - 2020', style={'textAlign': 'center'})),    
 ])], className='col-md-9')], className='row')
 
 ## habilitar boton envio
